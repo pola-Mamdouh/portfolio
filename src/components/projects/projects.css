@@ -133,14 +133,29 @@ section.projects .card .links .icons a.card-link {
     }
 }
 @media (max-width: 992px) {
-    .content {
+    section.projects .content {
         flex-direction: column;
     }
+    
     section.projects .sidebar {
         width: 100%;
+        position: static;
+        margin-bottom: 20px;
     }
+
     section.projects .sidebar ul {
-        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    section.projects .sidebar ul li button {
+        white-space: nowrap;
+        padding: 8px 15px;
+    }
+
+    section.projects .projects {
         width: 100%;
     }
 }
@@ -186,6 +201,16 @@ section.projects .card .links .icons a.card-link {
         width: 95%;
     }
 
+}
+@media (max-width: 576px) {
+    section.projects .sidebar ul {
+        gap: 8px;
+    }
+
+    section.projects .sidebar ul li button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 }
 
 @keyframes goProject {
