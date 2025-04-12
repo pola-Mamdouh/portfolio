@@ -1,0 +1,198 @@
+section.projects .content{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+section.projects a {
+    text-decoration: none;
+    color: #fff;
+}
+section.projects .sidebar{
+    width: 20%;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    align-self: flex-start;
+}
+section.projects .projects {
+    min-width:  70%;
+}
+section.projects .sidebar ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.projects .sidebar ul li button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #272731;
+    color: #bdbdbd;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 200px;
+    max-width: 200px;
+    font-size: 18px;
+}
+.light section.projects .sidebar ul li button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #e0e0e0;
+}
+section.projects .sidebar ul li button.active {
+    border: 1px solid #107bbe;
+    background-color: #343444;
+}
+.light section.projects .sidebar ul li button.active {
+    border: 1px solid #107bbe;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(16, 123, 190, 0.2);
+}
+section.projects .cards {
+    gap: 15px;
+}
+section.projects .card{
+    padding: 0;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 2px solid #385566;
+    transition: .3s;
+    cursor: pointer;
+    flex-wrap: wrap;
+    min-width: 350px;
+    max-width: 350px;
+}
+.light section.projects .card {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+section.projects .card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+section.projects .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+section.projects .card:hover {
+    border-color: #107bbe;
+}
+section.projects .card h5.card-title {
+    font-size: 22px;
+}
+.light section.projects .card h5.card-title {
+    color: #333;
+}
+section.projects .card p.card-text {
+    color: #777;
+}
+.light section.projects .card p.card-text {
+    color: #666;
+}
+section.projects .card .links {
+    display: flex;
+    justify-content: space-between;
+}
+section.projects .card .links  a.card-link {
+    gap: 5px;
+    color: #0b476d
+}
+section.projects .card .links  a.card-link:hover i {
+    animation: goProject 0.5s linear infinite;
+}
+section.projects .card .links  a.card-link:hover {
+    color: #107bbe
+}
+section.projects .card .links .icons {
+    display: flex;
+    gap: 10px;
+}
+section.projects .card .links .icons a {
+    font-size: 23px;
+    color: #777;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+section.projects .card .links .icons a:hover {
+    color: #107bbe;
+}
+
+section.projects .card .links .icons a.card-link {
+    color: #107bbe;
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: 32%!important;
+    }
+}
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+    }
+    section.projects .sidebar {
+        width: 100%;
+    }
+    section.projects .sidebar ul {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .col-md-6 {
+    width: 49%;
+    }
+    .sidebar {
+        width: 100%!important;
+    }
+    section.projects .sidebar ul li button {
+        min-width: 0;
+        width: 100%;
+        min-height: 74px;
+        max-height: 100px;
+    }
+    section.projects .card {
+        width: 48%;
+    }
+    section.projects .cards {
+        gap: 20px;
+    }
+}
+@media (max-width: 768px) {
+    section.projects .sidebar ul {
+        flex-wrap: wrap;
+    }
+    section.projects .sidebar ul li {
+        width: 48%;
+    }
+    section.projects .sidebar ul li button {
+        width: 100%;
+        padding: 5px 5px; 
+        font-size: 15px;
+        min-width: 0;
+        max-width: 100%;
+    }
+    section.projects .cards {
+        justify-content: center;
+        align-items: center;
+    }
+    section.projects .card {
+        width: 95%;
+    }
+
+}
+
+@keyframes goProject {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}

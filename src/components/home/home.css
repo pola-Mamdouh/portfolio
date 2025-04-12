@@ -1,0 +1,72 @@
+section.home .content .home-info{
+    width: 70%;
+}
+.light section.home {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.light section.home .content .home-info h1 {
+    color: #222;
+}
+section.home .content .home-info p.description {
+    color: #888;
+}
+.light section.home .content .home-info p.description {
+    color: #555;
+}
+section.home .content .home-info ul {
+    display: flex;
+    gap: 20px;
+    color: #ddd;
+    padding: 0;
+}
+.light section.home .content .home-info ul {
+    color: #333;
+}
+section.home .content .home-info ul li a {
+    color: #ddd;
+    font-size: 20px;
+    transition: .3s;
+}
+.light section.home .content .home-info ul li a {
+    color: #444;
+}
+section.home .content .home-info ul li a:hover {
+    color: salmon;
+}
+.light section.home .content .home-info ul li a:hover {
+    color: #107bbe;
+}
+section.home .content .home-profile {
+    width: 500px;
+}
+section.home .content .home-profile img{
+    width: 100%;
+    object-fit: contain;
+    transition: .3s;
+    animation: UpDown 2s infinite linear;
+}
+
+@keyframes UpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 992px) {
+
+    section.home .content .home-profile {
+        display: none;
+    }
+
+
+}

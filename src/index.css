@@ -1,0 +1,65 @@
+:root {
+  --main-color: #000;
+  /* --dark-mode: #121212; */
+  --dark-mode: #222222;
+  --secondary-color: ;
+  --border-: ;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  
+
+}
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #343434;
+}
+.light section {
+  border-bottom: 1px solid #e0e0e0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+main {
+  color: #fff;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+button:active {
+  scale: .9;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-body {
+  transition: .5s;
+}
+.light {
+  background-color: #fff;
+}
+.dark {
+  background-color: var(--dark-mode)!important;
+}

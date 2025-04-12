@@ -1,0 +1,215 @@
+/* 
+  1.Header
+  2.Header Navbar
+  3.Mood
+  4.Menu Model
+  5.Responsive design
+*/
+:root {
+  --header-nav-color: #444444;
+  --light-header-nav-color: #f5f5f5;
+  --light-text-color: #333333;
+  --light-shadow-color: rgba(0, 0, 0, 0.1);
+  --light-border-color: #e0e0e0;
+  --light-hover-color: #107bbe;
+  --light-background-color: #ffffff;
+  --light-menu-background: #ffffff;
+  --light-menu-border: #e0e0e0;
+}
+/* 1-Header */
+header {
+  padding: 20px;
+}
+.light header {
+  background-color: var(--light-background-color);
+}
+header ul.navbar {
+  border-radius: 30px;
+  margin: 0 auto;
+}
+/* ===============================
+    2-Header Navbar 
+ =============================== */
+header ul.navbar li a {
+  text-decoration: none;
+  color: #ffffffda;
+  padding: 10px 20px;
+  background-color: var(--header-nav-color);
+  transition: 0.3s;
+  font-size: 18px;
+}
+.light header ul.navbar li a { 
+  color: var(--light-text-color);
+  background-color: var(--light-header-nav-color);
+  box-shadow: 0 2px 6px var(--light-shadow-color);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+header ul.navbar li:first-child a {
+  border-top-left-radius: 20px;
+}
+header ul.navbar li:last-child a {
+  border-bottom-right-radius: 20px;
+}
+header ul.navbar li a:hover {
+  color: #0d538d;
+}
+.light header ul.navbar li a:hover {
+  color: var(--light-hover-color);
+}
+.show-model {
+  display: none;
+  color: #717171;
+  font-size: 27px;
+}
+.light .show-model {
+  color: var(--light-text-color);
+  border: 1px solid var(--light-border-color);
+  background-color: var(--light-header-nav-color);
+}
+.show-model {
+  border: 1px solid rgb(208, 184, 181);
+  transition: .3s;
+}
+.show-model:hover{
+  border: 1px solid salmon;
+}
+.light .show-model:hover {
+  border: 1px solid var(--light-hover-color);
+}
+/* ===============================
+  3-Mood  
+ =============================== */
+header button.mode {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--header-nav-color);
+  color: #ffffff7f;
+  box-shadow: 0 0 6px 1px #fff;
+  font-size: 20px;
+  transition: .3s;
+}
+.light header button.mode {
+  background-color: var(--light-header-nav-color);
+  color: var(--light-text-color);
+  box-shadow: 0 2px 6px var(--light-shadow-color);
+}
+header button.mode:hover {
+  box-shadow: 0 0 6px 1px salmon;
+}
+.light header button.mode:hover {
+  box-shadow: 0 0 6px 1px var(--light-hover-color);
+}
+/* =============================== 
+  4-Menu Model  
+=============================== */
+.menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: #596b758d;
+}
+.light .menu {
+  background-color: rgba(89, 107, 117, 0.2);
+}
+.menu ul.model {
+  background-color: #000000;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  position: relative;
+  padding-top: 20px;
+  animation: model-animation 0.7s;
+}
+.light .menu ul.model {
+  background-color: var(--light-menu-background);
+  box-shadow: 0 4px 12px var(--light-shadow-color);
+  border: 1px solid var(--light-border-color);
+}
+.menu ul.model li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin: 5px 0;
+  position: relative;
+  padding: 10px 0;
+}
+.light .menu ul.model li a {
+  color: var(--light-text-color);
+}
+.menu ul.model li:not(:last-child) a {
+  border-bottom: 1px solid #9e9e9e;
+}
+.light .menu ul.model li:not(:last-child) a {
+  border-bottom: 1px solid var(--light-menu-border);
+}
+.menu ul.model li.exit-model {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 100;
+}
+.menu ul.model li.exit-model button {
+  place-self: end;
+  background-color: transparent;
+  color: #ddd;
+  padding: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  font-weight: bolder;
+}
+.light .menu ul.model li.exit-model button {
+  color: var(--light-text-color);
+}
+.menu ul.model li.exit-model button:hover {
+  transform: rotate(180deg);
+  color: crimson;
+}
+.light .menu ul.model li.exit-model button:hover {
+  color: var(--light-hover-color);
+}
+@keyframes model-animation {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* =============================== 
+    5-Responsive Design for mobile 
+/* =============================== */
+@media (max-width: 700px) {
+  .container {
+    justify-content: space-between;
+  }
+  .menu {
+    display: block;
+  }
+  ul.navbar {
+    display: none;
+  }
+  .show-model {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: var(--header-nav-color);
+  }
+  .light .show-model {
+    background: var(--light-header-nav-color);
+    box-shadow: 0 0 6px 1px var(--light-shadow-color);
+  }
+}
