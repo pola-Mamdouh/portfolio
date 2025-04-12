@@ -1,6 +1,12 @@
-section.home .content .home-info{
+section.home .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-info{
     width: 70%;
 }
+
 .light section.home {
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
@@ -63,6 +69,13 @@ section.home .content .home-profile img{
 }
 
 @media (max-width: 992px) {
+    section.home .content {
+        width: 100%;
+        justify-content: center;
+    }
+    .home-info{
+        width: 100%;
+    }
 
     section.home .content .home-profile {
         display: none;

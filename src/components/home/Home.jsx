@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section className="home" id="home">
       <div className="container">
-        <div className="content flex-between">
+        <div className="content ">
           <div className="home-info">
             <LetterAnimation />
             <p className="description">
