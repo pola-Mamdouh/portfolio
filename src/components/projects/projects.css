@@ -147,12 +147,14 @@ section.projects .card .links .icons a.card-link {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        justify-content: center;
+        flex-direction: row;
     }
 
     section.projects .sidebar ul li button {
-        white-space: nowrap;
+        height: 100%;
         padding: 8px 15px;
+        min-width: 100px;
+        max-width: 130px;
     }
 
     section.projects .projects {
