@@ -7,7 +7,7 @@ const LetterAnimation = () => {
       <span style={{ color: "salmon", fontWeight: "bold" }}>
         <Typewriter
           words={["Front-end Developer", "React Developer"]}
-          loop={1.5}
+          loop={2.5}
           cursor
           cursorStyle=""
           typeSpeed={50}

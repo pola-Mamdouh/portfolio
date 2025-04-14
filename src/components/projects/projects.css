@@ -58,7 +58,6 @@ section.projects .card{
     color: #fff;
     border: 2px solid #385566;
     transition: .3s;
-    cursor: pointer;
     flex-wrap: wrap;
     min-width: 350px;
     max-width: 350px;
@@ -69,10 +68,21 @@ section.projects .card{
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+span.full-description {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+section.projects .card:hover span.full-description {
+    opacity: 1;
+    height: auto;
+}
 section.projects .card-img {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    cursor: pointer;
 }
 section.projects .card-img img {
     width: 100%;
@@ -90,7 +100,9 @@ section.projects .card h5.card-title {
     color: #333;
 }
 section.projects .card p.card-text {
+    cursor: pointer;
     color: #777;
+    transition: .3s;
 }
 .light section.projects .card p.card-text {
     color: #666;
