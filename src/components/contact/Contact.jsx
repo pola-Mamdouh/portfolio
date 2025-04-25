@@ -61,7 +61,12 @@ const Contact = () => {
           something new
         </p>
         <div className="content">
-          <form onSubmit={handleSubmit}>
+          <motion.form
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
+            onSubmit={handleSubmit}
+          >
             <div className="email">
               <label htmlFor="email">Email Address:</label>
               <input
@@ -72,12 +77,7 @@ const Contact = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
-              className="message"
-            >
+            <div className="message">
               <label htmlFor="message">Your Message:</label>
               <textarea
                 name="message"
@@ -85,7 +85,7 @@ const Contact = () => {
                 required
                 onChange={handleInputChange}
               ></textarea>
-            </motion.div>
+            </div>
 
             <div className="submit-section">
               <button
@@ -107,7 +107,7 @@ const Contact = () => {
                 </p>
               )}
             </div>
-          </form>
+          </motion.form>
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -123,7 +123,8 @@ const Contact = () => {
                 </li>
                 <li>
                   <a href="mailto:bolamamdoh259@gmail.com">
-                    <i className="fa-solid fa-envelope"></i> bolamamdoh259@gmail.com
+                    <i className="fa-solid fa-envelope"></i>{" "}
+                    bolamamdoh259@gmail.com
                   </a>
                 </li>
               </ul>
