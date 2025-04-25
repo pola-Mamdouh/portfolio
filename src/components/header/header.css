@@ -21,7 +21,7 @@ header {
   padding: 20px;
 }
 .light header {
-  background-color: var(--light-background-color);
+
 }
 header ul.navbar {
   border-radius: 30px;

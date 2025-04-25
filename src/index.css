@@ -1,9 +1,6 @@
 :root {
   --main-color: #000;
-  /* --dark-mode: #121212; */
   --dark-mode: #222222;
-  --secondary-color: ;
-  --border-: ;
 
 }
 * {
@@ -13,6 +10,7 @@
 }
 html {
   scroll-behavior: smooth;
+  color-scheme: auto;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -58,7 +56,7 @@ button:active {
   transition: .5s;
 }
 .light {
-  background-color: #fff;
+  background-color: #e1e1e1!important;
 }
 .dark {
   background-color: var(--dark-mode)!important;

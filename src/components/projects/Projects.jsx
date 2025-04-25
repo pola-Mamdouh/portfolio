@@ -176,7 +176,7 @@ const Projects = () => {
                   
                     <a href={goProject} className="card-link-wrapper" target="_blank" rel="noopener noreferrer">
                       <div className="card-img">
-                        <img src={imgSRC} alt={title} />
+                        <img src={imgSRC} alt={title} loading="lazy"/>
                       </div>
                       <div className="card-body">
                         <h5 className="card-title">{title}</h5>
