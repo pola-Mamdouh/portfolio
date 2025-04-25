@@ -39,7 +39,7 @@ const Home = () => {
           </div>
           <div className="home-profile flex-center">
             <div className="frame"></div>
-            <img src="/images/my_profile.png" alt="my-profile" />
+            <img src="/images/my_profile.png" loading="eager" alt="my-profile" />
           </div>
         </div>
       </div>
