@@ -64,43 +64,61 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <div className="email">
               <label htmlFor="email">Email Address:</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
                 onChange={handleInputChange}
               />
             </div>
             <div className="message">
               <label htmlFor="message">Your Message:</label>
-              <textarea 
-                name="message" 
-                id="message" 
+              <textarea
+                name="message"
+                id="message"
                 required
                 onChange={handleInputChange}
               ></textarea>
             </div>
 
             <div className="submit-section">
-              <button 
-                type="submit" 
-                className={`btn btn-success ${isSending ? 'sending' : ''}`}
+              <button
+                type="submit"
+                className={`btn btn-success ${isSending ? "sending" : ""}`}
                 disabled={isSending}
               >
-                <span>{isSending ? 'Sending...' : 'Submit'}</span>
+                <span>{isSending ? "Sending..." : "Submit"}</span>
                 <i className="fa-solid fa-paper-plane"></i>
               </button>
               {status === "SUCCESS" && (
-                <p className="success-msg">Thank you! Your message has been sent.</p>
+                <p className="success-msg">
+                  Thank you! Your message has been sent.
+                </p>
               )}
               {status === "ERROR" && (
-                <p className="error-msg">Oops! Something went wrong. Please try again.</p>
+                <p className="error-msg">
+                  Oops! Something went wrong. Please try again.
+                </p>
               )}
             </div>
           </form>
           <div className="mail-img">
-            <img src="/images/message-me.png" alt="Contact illustration" />
+            <div className="contact-info">
+              <ul>
+                <li>
+                  <a href="https://wa.me/+2001140385268">
+                    <i class="fa-brands fa-whatsapp"></i> +20 011 40385268
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:bolamamdoh259@gmail.com">
+                    <i class="fa-solid fa-envelope"></i> bolamamdoh259@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <img src="/images/my_profile.png" alt="Contact " />
           </div>
         </div>
       </div>

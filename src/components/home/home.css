@@ -4,7 +4,8 @@ section.home .content {
     align-items: center;
 }
 .home-info{
-    width: 70%;
+    width: 65%;
+    max-width: 65%;
 }
 
 .light section.home {
@@ -44,37 +45,71 @@ section.home .content .home-info ul li a:hover {
     color: #107bbe;
 }
 section.home .content .home-profile {
-    width: 500px;
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+@media (min-width: 992px) {
+    section.home .content .home-profile .frame{
+        width: 100%;
+        height: 100%;
+        background-color: salmon;
+        border-radius: 78% 6%;
+        position: absolute;
+    }
+    section.home .content .home-profile .frame::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: salmon;
+        border-radius: 6% 78% ;
+    }
 }
 section.home .content .home-profile img{
-    width: 100%;
+    width: 75%;
+    height: 100%;
     object-fit: contain;
     transition: .3s;
-    animation: UpDown 2s infinite linear;
-}
-
-@keyframes UpDown {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    75% {
-        transform: translateY(-5px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+    position: absolute;
 }
 
 @media (max-width: 992px) {
-    section.home .content {
+    section.home {
         width: 100%;
-        justify-content: center;
+        background-image: url(/images/my_profile.png);
+        background-position: right;
+        background-size: 236px;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1000;
+    }
+    
+    section.home::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.341);
+        z-index: 1;
+        
     }
     .home-info{
-        width: 100%;
+        width: 100%!important;
+        max-width: 100%!important;
+        position: relative;
+        z-index: 2000;
+        
+    }
+    .home-info p.description {
+        color: #ffffffa8!important;
+    }
+    .light .home-info p.description {
+        color: #d7d6d6!important;
     }
 
     section.home .content .home-profile {
@@ -82,4 +117,11 @@ section.home .content .home-profile img{
     }
 
 
+}
+@media (max-width: 768px) {
+    section.home {
+        background-size: 290px;
+        background-position: center;
+    }
+    
 }

@@ -111,6 +111,7 @@ header button.mode:hover {
   position: fixed;
   inset: 0;
   background-color: #596b758d;
+  z-index: 3000;
 }
 .light .menu {
   background-color: rgba(89, 107, 117, 0.2);
@@ -127,6 +128,7 @@ header button.mode:hover {
   position: relative;
   padding-top: 20px;
   animation: model-animation 0.7s;
+
 }
 .light .menu ul.model {
   background-color: var(--light-menu-background);
