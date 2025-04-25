@@ -9,7 +9,7 @@ const Footer = () => {
           <ul className="media-icon">
             <li>
               <a href="https://wa.me/+2001140385268" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
+                <i className="fa-brands fa-whatsapp"></i>
               </a>
             </li>
             <li>

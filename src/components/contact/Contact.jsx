@@ -1,6 +1,6 @@
 import "./contact.css";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   const [status, setStatus] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -72,7 +72,12 @@ const Contact = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="message">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2 }}
+              className="message"
+            >
               <label htmlFor="message">Your Message:</label>
               <textarea
                 name="message"
@@ -80,7 +85,7 @@ const Contact = () => {
                 required
                 onChange={handleInputChange}
               ></textarea>
-            </div>
+            </motion.div>
 
             <div className="submit-section">
               <button
@@ -103,23 +108,28 @@ const Contact = () => {
               )}
             </div>
           </form>
-          <div className="mail-img">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
+            className="mail-img"
+          >
             <div className="contact-info">
               <ul>
                 <li>
                   <a href="https://wa.me/+2001140385268">
-                    <i class="fa-brands fa-whatsapp"></i> +20 011 40385268
+                    <i className="fa-brands fa-whatsapp"></i> +20 011 40385268
                   </a>
                 </li>
                 <li>
                   <a href="mailto:bolamamdoh259@gmail.com">
-                    <i class="fa-solid fa-envelope"></i> bolamamdoh259@gmail.com
+                    <i className="fa-solid fa-envelope"></i> bolamamdoh259@gmail.com
                   </a>
                 </li>
               </ul>
             </div>
             <img src="/images/my_profile.png" alt="Contact " />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

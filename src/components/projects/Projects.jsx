@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./projects.css";
-
+import { motion } from "framer-motion";
 const Projects = () => {
   const mylinkedin = "https://www.linkedin.com/in/paula-mamdoh-15382125a";
   const filters = [
@@ -132,21 +132,25 @@ const Projects = () => {
       setFilteredProjects(myProjects);
     } else {
       const filterKeywords = filter.split(" & ");
-  
+
       const filtered = myProjects.filter((project) =>
         filterKeywords.every((tech) => project.technologies.includes(tech))
       );
-  
+
       setFilteredProjects(filtered);
     }
   };
-  
 
   return (
     <section className="projects" id="projects">
       <div className="container">
         <div className="content">
-          <div className="sidebar">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="sidebar"
+          >
             <ul>
               {filters.map((filter) => (
                 <li key={filter}>
@@ -159,8 +163,13 @@ const Projects = () => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="projects">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="projects"
+          >
             <div className="cards row">
               {filteredProjects.map(
                 ({
@@ -173,10 +182,12 @@ const Projects = () => {
                   goProject,
                 }) => (
                   <div className="card col-lg-4 col-md-6 col-sm-12" key={id}>
-                  
-                    <a href={goProject} className="card-link-wrapper" target="_blank" rel="noopener noreferrer">
+                    <div
+                      className="card-link-wrapper"
+                      onClick={() => window.open(goProject, "_blank")}
+                    >
                       <div className="card-img">
-                        <img src={imgSRC} alt={title} loading="lazy"/>
+                        <img src={imgSRC} alt={title} loading="lazy" />
                       </div>
                       <div className="card-body">
                         <h5 className="card-title">{title}</h5>
@@ -185,25 +196,38 @@ const Projects = () => {
                         </p>
                         <div className="links">
                           <div className="icons">
-                            <a href={linkedin} onClick={(e) => e.stopPropagation()}>
+                            <a
+                              href={linkedin}
+                              target="_blank"
+                              onClick={(e) => e.stopPropagation()}
+                            >
                               <i className="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href={github} onClick={(e) => e.stopPropagation()}>
+                            <a
+                              href={github}
+                              target="_blank"
+                              onClick={(e) => e.stopPropagation()}
+                            >
                               <i className="fa-brands fa-github"></i>
                             </a>
                           </div>
-                          <a href={goProject} className="card-link flex-center">
+                          <a
+                            href={goProject}
+                            className="card-link flex-center"
+                            target="_blank"
+                            onClick={(e) => e.stopPropagation()}
+                          >
                             Show Project
                             <i className="fa-solid fa-right-long"></i>
                           </a>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 )
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

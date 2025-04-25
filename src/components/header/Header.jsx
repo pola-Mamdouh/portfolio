@@ -5,8 +5,6 @@ const Header = ({mode,modeHandler}) => {
   const showModelHandler = () => {
     setShowModel(false)
   }
-  
-  console.log(mode)
   return (
     <header>
       <div className="container flex-center">
