@@ -5,10 +5,11 @@ const Projects = () => {
   const mylinkedin = "https://www.linkedin.com/in/paula-mamdoh-15382125a";
   const filters = [
     "All Projects",
-    "HTML & CSS",
-    "HTML & CSS & JS",
-    "HTML & CSS & BOOTSTRAP",
-    "REACT & BOOTSTRAP",
+    "Prime",
+    // "HTML & CSS",
+    // "HTML & CSS & JS",
+    // "HTML & CSS & BOOTSTRAP",
+    // "REACT & BOOTSTRAP",
   ];
 
   const [activeFilter, setActiveFilter] = useState(filters[0]);
@@ -23,6 +24,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/movies_TMDB",
       goProject: "https://movies-tmdb-zeta.vercel.app/",
       technologies: ["REACT", "BOOTSTRAP"],
+      isPrime: false,
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/count-down-landing",
       goProject: "https://count-down-landing.vercel.app/",
       technologies: ["HTML", "CSS", "BOOTSTRAP", "JS"],
+      isPrime: false,
     },
     {
       id: 3,
@@ -45,6 +48,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/Lookscout",
       goProject: "https://lookscout-opal.vercel.app/",
       technologies: ["HTML", "CSS", "BOOTSTRAP"],
+      isPrime: true,
     },
     {
       id: 4,
@@ -56,6 +60,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/e-commerce",
       goProject: "https://e-commerce-ashy-nu.vercel.app/",
       technologies: ["HTML", "CSS", "BOOTSTRAP", "JS"],
+      isPrime: true,
     },
     {
       id: 5,
@@ -67,6 +72,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/To-Do-List",
       goProject: "https://to-do-list-gilt-pi.vercel.app/",
       technologies: ["REACT", "BOOTSTRAP"],
+      isPrime: false,
     },
     {
       id: 6,
@@ -78,6 +84,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/template-three",
       goProject: "https://template-three-nine.vercel.app/",
       technologies: ["HTML", "CSS"],
+      isPrime: false,
     },
     {
       id: 7,
@@ -89,6 +96,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/template-two",
       goProject: "https://template-two-ten.vercel.app/",
       technologies: ["HTML", "CSS"],
+      isPrime: true,
     },
     {
       id: 8,
@@ -100,6 +108,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/template-one",
       goProject: "https://template-one-kappa-nine.vercel.app/",
       technologies: ["HTML", "CSS"],
+      isPrime: false,
     },
     {
       id: 9,
@@ -111,6 +120,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/phone-app",
       goProject: "https://phone-app-ten.vercel.app/",
       technologies: ["HTML", "CSS", "BOOTSTRAP"],
+      isPrime: false,
     },
     {
       id: 10,
@@ -122,6 +132,7 @@ const Projects = () => {
       github: "https://github.com/pola-Mamdouh/company",
       goProject: "https://company-kappa-nine.vercel.app/",
       technologies: ["HTML", "CSS", "BOOTSTRAP"],
+      isPrime: false,
     },
   ]);
   const [filteredProjects, setFilteredProjects] = useState(myProjects);
@@ -131,11 +142,12 @@ const Projects = () => {
     if (filter === "All Projects") {
       setFilteredProjects(myProjects);
     } else {
-      const filterKeywords = filter.split(" & ");
+      // const filterKeywords = filter.split(" & ");
 
-      const filtered = myProjects.filter((project) =>
-        filterKeywords.every((tech) => project.technologies.includes(tech))
-      );
+      // const filtered = myProjects.filter((project) =>
+      //   filterKeywords.every((tech) => project.technologies.includes(tech))
+      //);
+      const filtered = myProjects.filter((el) => el.isPrime);
 
       setFilteredProjects(filtered);
     }
@@ -155,7 +167,7 @@ const Projects = () => {
               {filters.map((filter) => (
                 <li key={filter}>
                   <button
-                    className={activeFilter === filter ? "active" : ""}
+                    className={`${activeFilter === filter ? "active" : ""}`}
                     onClick={() => filterProjectsHandler(filter)}
                   >
                     {filter}
@@ -180,8 +192,14 @@ const Projects = () => {
                   linkedin,
                   github,
                   goProject,
+                  isPrime,
                 }) => (
-                  <div className="card col-lg-4 col-md-6 col-sm-12" key={id}>
+                  <div
+                    className={`card col-lg-4 col-md-6 col-sm-12 ${
+                      isPrime ? "prime" : null
+                    }`}
+                    key={id}
+                  >
                     <div
                       className="card-link-wrapper"
                       onClick={() => window.open(goProject, "_blank")}
