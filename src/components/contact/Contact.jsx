@@ -32,7 +32,7 @@ const Contact = () => {
           setStatus("SUCCESS");
           setIsSending(false);
           form.reset();
-        }, 1500); // Wait for animation to complete
+        }, 500); // Wait for animation to complete
       } else {
         setTimeout(() => {
           setStatus("ERROR");
@@ -49,6 +49,11 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
+      <div className="go-contact flex-center">
+        <a href="#contact">
+          <i className="fa-solid fa-headset"></i>
+        </a>
+      </div>
       <div className="container">
         <h2 className="title">
           <span>

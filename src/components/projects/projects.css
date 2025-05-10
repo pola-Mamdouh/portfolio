@@ -200,6 +200,7 @@ section.projects .card .links .icons a.card-link {
   }
   .sidebar {
     width: 100% !important;
+    
   }
   section.projects .sidebar ul li button {
     min-width: 0;
@@ -215,6 +216,9 @@ section.projects .card .links .icons a.card-link {
   }
 }
 @media (max-width: 768px) {
+  section.projects .sidebar {
+    margin-bottom: 0px!important;
+  }
   section.projects .sidebar ul {
     flex-wrap: wrap;
   }
