@@ -185,7 +185,7 @@ section.contact .content .mail-img .contact-info ul {
   align-items: center;
   gap: 10px;
 }
-section.contact .content .mail-img .contact-info ul li  {
+section.contact .content .mail-img .contact-info ul li {
   width: fit-content;
   background-color: #ff6e5e;
   padding: 5px;
@@ -206,7 +206,6 @@ section.contact .content .mail-img img {
 }
 
 @media (max-width: 992px) {
-  
   section.contact .content {
     justify-content: center;
   }
@@ -263,7 +262,6 @@ section.contact .go-contact {
   border-radius: 50%;
   background-color: salmon;
   z-index: 3000;
-  
 }
 section.contact .go-contact a {
   color: #fff;
@@ -274,14 +272,6 @@ section.contact .go-contact a {
     flex-direction: column;
     align-items: stretch;
   }
-  section.contact .go-contact {
-    bottom: 10px;
-    right: 10px;
-  }
-  section.contact .go-contact a {
-  font-size: 18px;
-
-}
 
   section.contact .content form .success-msg,
   section.contact .content form .error-msg {
