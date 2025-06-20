@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./projects.css";
 import { motion } from "framer-motion";
+
+import { v4 as uuidv4 } from 'uuid';
+
+
 const Projects = () => {
   const mylinkedin = "https://www.linkedin.com/in/paula-mamdoh-15382125a";
   const filters = [
@@ -15,7 +19,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState(filters[0]);
   const [myProjects, setMyProjects] = useState([
     {
-      id: 1,
+      id: uuidv4(),
       imgSRC: "/images/movies-project.png",
       title: "Movies-Project",
       description:
@@ -27,7 +31,7 @@ const Projects = () => {
       isPrime: false,
     },
     {
-      id: 2,
+      id: uuidv4(),
       imgSRC: "/images/count-down-landing.png",
       title: "Countdown Landing Page",
       description:
@@ -39,7 +43,7 @@ const Projects = () => {
       isPrime: false,
     },
     {
-      id: 3,
+      id: uuidv4(),
       imgSRC: "/images/lookscout.png",
       title: "Lookscout",
       description:
@@ -51,7 +55,7 @@ const Projects = () => {
       isPrime: true,
     },
     {
-      id: 4,
+      id: uuidv4(),
       imgSRC: "/images/e-commerce.png",
       title: "E-commerce",
       description:
@@ -63,19 +67,19 @@ const Projects = () => {
       isPrime: true,
     },
     {
-      id: 5,
-      imgSRC: "/images/to-do-list.png",
+      id: uuidv4(),
+      imgSRC: "/images/toDoList.png",
       title: "To Do List",
       description:
         "A modern task management application built with React and Bootstrap. Features include adding, editing, and deleting tasks, with a clean and intuitive user interface. The app demonstrates state management and CRUD operations in a React application.",
       linkedin: mylinkedin,
-      github: "https://github.com/pola-Mamdouh/To-Do-List",
-      goProject: "https://to-do-list-gilt-pi.vercel.app/",
+      github: "https://github.com/pola-Mamdouh/To-Do-List-MUI",
+      goProject: "https://to-do-list-mui-ten.vercel.app/",
       technologies: ["REACT", "BOOTSTRAP"],
-      isPrime: false,
+      isPrime: true,
     },
     {
-      id: 6,
+      id: uuidv4(),
       imgSRC: "/images/template-three.png",
       title: "Landing Page",
       description:
@@ -87,7 +91,7 @@ const Projects = () => {
       isPrime: false,
     },
     {
-      id: 7,
+      id: uuidv4(),
       imgSRC: "/images/template-two.png",
       title: "Landing Page",
       description:
@@ -99,7 +103,7 @@ const Projects = () => {
       isPrime: true,
     },
     {
-      id: 8,
+      id: uuidv4(),
       imgSRC: "/images/template-one.png",
       title: "Landing Page",
       description:
@@ -111,7 +115,7 @@ const Projects = () => {
       isPrime: false,
     },
     {
-      id: 9,
+      id: uuidv4(),
       imgSRC: "/images/phone-app.png",
       title: "Phone app",
       description:
@@ -123,7 +127,7 @@ const Projects = () => {
       isPrime: false,
     },
     {
-      id: 10,
+      id: uuidv4(),
       imgSRC: "/images/company.png",
       title: "Company",
       description:

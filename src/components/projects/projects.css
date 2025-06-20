@@ -32,7 +32,7 @@ section.projects .sidebar ul li button {
   border-radius: 5px;
   text-align: center;
   min-width: 200px;
-  max-width: 200px;
+  max-width: 100%;
   font-size: 18px;
 }
 .light section.projects .sidebar ul li button {
@@ -166,8 +166,12 @@ section.projects .card .links .icons a.card-link {
   }
 }
 @media (max-width: 992px) {
+  section.projects {
+    padding-top: 30px;
+  }
   section.projects .content {
     flex-direction: column;
+    gap: 0;
   }
 
   section.projects .sidebar {
@@ -202,9 +206,12 @@ section.projects .card .links .icons a.card-link {
     width: 100% !important;
     
   }
+  section.projects .sidebar ul li {
+    width: auto;
+  }
   section.projects .sidebar ul li button {
     min-width: 0;
-    width: 100%;
+    width: 100%!important;
     min-height: 74px;
     max-height: 100px;
   }
