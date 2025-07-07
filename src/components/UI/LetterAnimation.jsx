@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 const LetterAnimation = () => {
   return (
     <h1>
-      I'm a {" "}
+      I'm <span style={{color: 'salmon'}}>Pola</span>, a {" "}
       <span style={{ color: "salmon", fontWeight: "bold" }}>
         <Typewriter
           words={["Front-end Developer", "React Developer"]}

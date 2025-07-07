@@ -10,7 +10,7 @@ const HomeInfo = () => {
     >
       <LetterAnimation />
       <p className="description">
-        I am a Front-End Developer with experience in HTML, CSS, JavaScript,
+        I am Pola, a Front-End Developer with experience in HTML, CSS, JavaScript,
         Bootstrap, and React.js. I specialize in building responsive and
         user-friendly web applications, ensuring a seamless user experience.
         Passionate about modern web technologies and continuously improving my
@@ -18,7 +18,7 @@ const HomeInfo = () => {
       </p>
       <ul className="media-icon">
         <li>
-          <a href="https://wa.me/+2001140385268" target="_blank">
+          <a href="https://wa.me/+2001501581399" target="_blank">
             <i className="fa-brands fa-whatsapp"></i>
           </a>
         </li>
