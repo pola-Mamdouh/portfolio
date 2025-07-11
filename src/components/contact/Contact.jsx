@@ -123,7 +123,7 @@ const Contact = () => {
               <ul>
                 <li>
                   <a href="https://wa.me/+2001140385268">
-                    <i className="fa-brands fa-whatsapp"></i> +20 011 40385268
+                    <i className="fa-brands fa-whatsapp"></i> +20 01 501581399
                   </a>
                 </li>
                 <li>

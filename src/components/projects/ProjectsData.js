@@ -15,6 +15,18 @@ export const projects = [
     },
     {
       id: uuidv4(),
+      imgSRC: "/images/native-fluency-student-manager.png",
+      title: "Native Fluency Student Manager",
+      description:
+      "A professional React.js + Material UI dashboard for Native Fluency Academy. Manage students, filter by category and level, and enjoy persistent, responsive, and user-friendly administration for English courses.",
+      linkedin: mylinkedin,
+      github: "https://github.com/pola-Mamdouh/native-fluency-student-manager",
+      goProject: "https://native-fluency-student-manager.vercel.app/",
+      technologies: ["REACT", "Material UI"],
+      isPrime: true,
+    },
+    {
+      id: uuidv4(),
       imgSRC: "/images/weatherApp.png",
       title: "API Weather App",
       description:
